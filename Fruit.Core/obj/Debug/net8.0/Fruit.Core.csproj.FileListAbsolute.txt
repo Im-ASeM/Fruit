@@ -1,0 +1,11 @@
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\bin\Debug\net8.0\Fruit.Core.deps.json
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\bin\Debug\net8.0\Fruit.Core.dll
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\bin\Debug\net8.0\Fruit.Core.pdb
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\Fruit.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\Fruit.Core.AssemblyInfoInputs.cache
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\Fruit.Core.AssemblyInfo.cs
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\Fruit.Core.csproj.CoreCompileInputs.cache
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\Fruit.Core.dll
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\refint\Fruit.Core.dll
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\Fruit.Core.pdb
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\ref\Fruit.Core.dll
