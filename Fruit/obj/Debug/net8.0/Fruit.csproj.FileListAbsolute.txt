@@ -75,3 +75,4 @@ C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit\obj\Debug\net8.0\refint\Fruit.dll
 C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit\obj\Debug\net8.0\Fruit.pdb
 C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit\obj\Debug\net8.0\Fruit.genruntimeconfig.cache
 C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit\obj\Debug\net8.0\ref\Fruit.dll
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit\obj\Debug\net8.0\Fruit.sourcelink.json

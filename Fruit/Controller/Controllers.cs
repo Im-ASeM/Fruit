@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 [Route("[Action]")]
@@ -18,5 +19,11 @@ public class Controllers:Controller
     [HttpPost]
     public IActionResult Register(IdLessUser user){
         return Ok(lp.Register(user));
+    }
+    [HttpGet]
+    [Authorize]
+    public IActionResult SelectFruits(){
+        List<string> fruits = new List<string>{"sib","kivi","moz","ANNANNAS!","holo","gilas"};
+        return Ok(fruits); 
     }
 }

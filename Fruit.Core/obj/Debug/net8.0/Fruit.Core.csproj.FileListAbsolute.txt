@@ -9,3 +9,4 @@ C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\Fruit.Core.dll
 C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\refint\Fruit.Core.dll
 C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\Fruit.Core.pdb
 C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\ref\Fruit.Core.dll
+C:\Users\asemn\Desktop\Code\C#\Fruit\Fruit.Core\obj\Debug\net8.0\Fruit.Core.sourcelink.json
