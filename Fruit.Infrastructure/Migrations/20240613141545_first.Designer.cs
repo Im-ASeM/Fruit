@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fruit.Infrastructure.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240612213353_first")]
+    [Migration("20240613141545_first")]
     partial class first
     {
         /// <inheritdoc />

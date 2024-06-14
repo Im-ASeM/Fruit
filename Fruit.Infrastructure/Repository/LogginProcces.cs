@@ -5,17 +5,47 @@ using Microsoft.IdentityModel.Tokens;
 
 public class LogginProcces : ILogginProcces
 {    Context db ;
-    string papar = "Salam In Papar Man Hast MASALA !!";
+    string papar = "Salam In Papar Man Hast MASALA";
     public LogginProcces(){
         db = new Context();
     }
+
+    public List<SimpleUser> AllUser()
+    {
+        List<SimpleUser> results = new List<SimpleUser>();
+        foreach(Users item in db.usersTbl.ToList()){
+            SimpleUser result = new SimpleUser{ID = item.ID , UserName = item.UserName};
+            results.Add(result);
+        }
+        return results;
+    }
+
+    public string DeleteUser(User user)
+    {
+        Users check = db.usersTbl.Find(user.ID);
+        if(check == null){
+            return "Invalid ID";
+        }
+        else if (check.UserName != user.UserName){
+            return "Invalid Username";
+        }
+        else if(!BCrypt.Net.BCrypt.Verify(user.Password + papar + user.UserName , check.Password)){
+            return "Invalid Password";
+        }
+        else{
+            db.usersTbl.Remove(check);
+            db.SaveChanges();
+            return "Done !";
+        }
+    }
+
     public string Login(IdLessUser user)
     {
         Users check = db.usersTbl.FirstOrDefault(x=> x.UserName==user.UserName);
         if(check == null){
             return "Invalid User";
         }
-        else if(BCrypt.Net.BCrypt.Verify(user.Password+papar+user.UserName , check.Password )){
+        else if(!BCrypt.Net.BCrypt.Verify(user.Password+papar+user.UserName , check.Password )){
             return "Invalid Password";
         }
         else{
@@ -24,7 +54,7 @@ public class LogginProcces : ILogginProcces
     }
 
     public string Register(IdLessUser user)
-    {
+    {   
         if(db.usersTbl.Any(x=> x.UserName==user.UserName)){
             return "USER IS ALLREADY ADDED";
         }
@@ -37,6 +67,23 @@ public class LogginProcces : ILogginProcces
         db.SaveChanges();
         return createToken(user);
 
+    }
+
+    public string UpdatePassword(UpdateUser user)
+    {
+        Users check = db.usersTbl.Find(user.ID);
+        if(check == null){
+            return "Invalid Id";
+        }
+        else if (check.UserName != user.UserName){
+            return "Invalid UserName";
+        }
+        else{
+            check.Password = BCrypt.Net.BCrypt.HashPassword(user.NewPassword+papar+user.UserName);
+            db.usersTbl.Update(check);
+            db.SaveChanges();
+            return "Done !";
+        }
     }
 
     private string createToken(IdLessUser user){

@@ -1,5 +1,6 @@
-public class IdLessUser
+public class SimpleUser
 {
+    public int ID { get; set; }
     private string _username;
     public string UserName {
         get{
@@ -9,5 +10,4 @@ public class IdLessUser
             _username=value.ToLower();
         }
     }
-    public string Password { get; set; }
 }

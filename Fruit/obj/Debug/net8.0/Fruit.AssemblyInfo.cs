@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fruit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da6df5d01f916b971f233a42092b92f8d24a0da9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d66126067fd74886c01430e8838772ec7f67380")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fruit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fruit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
