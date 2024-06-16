@@ -1,6 +1,5 @@
 public class UpdateUser
 {
-    public int ID { get; set; }
     private string _username;
     public string UserName {
         get{
@@ -11,4 +10,5 @@ public class UpdateUser
         }
     }
     public string NewPassword { get; set; }
+    public int SmsCode { get; set; }
 }

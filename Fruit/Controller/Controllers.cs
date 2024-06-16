@@ -22,8 +22,12 @@ public class Controllers:Controller
     }
     
     [HttpPut]
-    public IActionResult RestorePassword(UpdateUser user){
-        return Ok(lp.UpdatePassword(user));
+    public IActionResult RestorePassword(string UserName){
+        return Ok(lp.RestorePassword(UserName));
+    }
+    [HttpPut]
+    public IActionResult VerifyPass(UpdateUser user){
+        return Ok(lp.VerifyPassword(user));
     }
 
     [HttpGet]

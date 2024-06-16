@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 public class Users
@@ -8,5 +9,8 @@ public class Users
     public string UserName { get; set; }
     [Required]
     public String Password { get; set; }
+    public bool ValidSms { get; set; }
+    public string phone { get; set; }
+    public int SmsCode { get; set; }
     public DateTime CreateDate { get; set; }
 }

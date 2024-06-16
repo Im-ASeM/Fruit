@@ -2,14 +2,18 @@ using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Azure.Identity;
+using Kavenegar;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 public class LogginProcces : ILogginProcces
 {    Context db ;
-    string papar = "Salam In Papar Man Hast MASALA";
+    private string papar = "Salam In Papar Man Hast MASALA";
+    private KavenegarApi smsApi;
     public LogginProcces(){
         db = new Context();
+        smsApi = new KavenegarApi(db.TokenSms.Find(1).token);
     }
 
     public List<SimpleUser> AllUser()
@@ -99,21 +103,45 @@ public class LogginProcces : ILogginProcces
 
     }
 
-    public string UpdatePassword(UpdateUser user)
+    public string VerifyPassword(UpdateUser user)
     {
-        Users check = db.usersTbl.Find(user.ID);
-        if(check == null){
-            return "Invalid Id";
-        }
-        else if (check.UserName != user.UserName){
+        Users check = db.usersTbl.FirstOrDefault(x=> x.UserName == user.UserName);
+        if (check == null){
             return "Invalid UserName";
         }
-        else{
-            check.Password = BCrypt.Net.BCrypt.HashPassword(user.NewPassword+papar+user.UserName);
-            db.usersTbl.Update(check);
-            db.SaveChanges();
-            return "Done !";
+        else if(check.ValidSms){
+            if (user.SmsCode != check.SmsCode){
+                check.ValidSms = false;
+                db.usersTbl.Update(check);
+                db.SaveChanges();
+                return "Invalid Sms";
+            }
+            else{
+                check.Password = BCrypt.Net.BCrypt.HashPassword(user.NewPassword+papar+user.UserName);
+                check.ValidSms = false;
+                check.CreateDate = DateTime.Now;
+                db.usersTbl.Update(check);
+                db.SaveChanges();
+                return "Done !";
+            }
         }
+        else{
+            return "Invalid Sms";
+        }
+    }
+
+    public string RestorePassword(string UserName){
+        Users check = db.usersTbl.FirstOrDefault(x=>UserName == x.UserName);
+        if(check==null){
+            return "Invalid User";
+        }
+        Random random = new Random();
+        check.ValidSms = true;
+        check.SmsCode = random.Next(100000,999999);
+        smsApi.VerifyLookup(check.phone , check.SmsCode.ToString() , "demo");
+        db.usersTbl.Update(check);
+        db.SaveChanges();
+        return "Code Sended";
     }
 
     private string createToken(User user){
