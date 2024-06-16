@@ -27,20 +27,27 @@ public class Controllers:Controller
     }
 
     [HttpGet]
-    [Authorize]
+    [Authorize(Roles ="user,admin")]
     public IActionResult SelectFruits(){
         List<string> fruits = new List<string>{"sib","kivi","moz","ANNANNAS!","holo","gilas"};
         return Ok(fruits); 
     }
 
     [HttpDelete]
-    [Authorize]
-    public IActionResult DeleteUser(User user){
-        return Ok(lp.DeleteUser(user));
+    [Authorize(Roles = "admin")]
+    public IActionResult DeleteUser(int Id){
+        return Ok(lp.DeleteUser(Id));
     }
+
     [HttpGet]
-    [Authorize]
+    [Authorize(Roles = "admin")]
     public IActionResult AllUser(){
         return Ok(lp.AllUser());
+    }
+
+    [HttpGet]
+    [Authorize(Roles = "admin")]
+    public IActionResult Promote(int UserID , string Role){
+        return Ok(lp.Promote(UserID , Role));
     }
 }

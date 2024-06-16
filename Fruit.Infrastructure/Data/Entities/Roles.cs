@@ -1,12 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-public class Users
+public class Roles
 {
     [Key]
     public int ID { get; set; }
-    [Required]
-    public string UserName { get; set; }
-    [Required]
-    public String Password { get; set; }
+    public string RoleName { get; set; }
     public DateTime CreateDate { get; set; }
 }
