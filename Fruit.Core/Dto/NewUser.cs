@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-public class UpdateUser
+public class NewUser
 {
     private string _username;
     [Required]
@@ -13,7 +13,7 @@ public class UpdateUser
         }
     }
     [Required]
-    public string NewPassword { get; set; }
+    public string Password { get; set; }
     [Required]
-    public int SmsCode { get; set; }
+    public string Phone { get; set; }
 }

@@ -74,11 +74,12 @@ public class LogginProcces : ILogginProcces
         result.UserRollID = checkRoll.ID;
         db.UserRoleTbl.Update(result);
         db.SaveChanges();
-        return $"{check.UserName} is {checkRoll.RoleName} Now ...";
+        // return $"{check.UserName} is {checkRoll.RoleName} Now ...";
+        return String.Format("{0} is {1} From Now",check.UserName,checkRoll.RoleName);
 
     }
 
-    public string Register(IdLessUser user)
+    public string Register(NewUser user)
     {   
         if(db.usersTbl.Any(x=> x.UserName==user.UserName)){
             return "USER IS ALLREADY ADDED";
@@ -87,7 +88,7 @@ public class LogginProcces : ILogginProcces
         Users result = new Users{
             UserName = user.UserName,
             Password = BCrypt.Net.BCrypt.HashPassword(user.Password+papar+user.UserName),
-            CreateDate = DateTime.Now
+            phone = user.Phone
         };
 
         db.usersTbl.Add(result);

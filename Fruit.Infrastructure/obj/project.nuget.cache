@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bqRoB+v5DefXLcoJirqNhQjb+9wpWn01X8nQdYsc8ArXV1u89kmv6wKSvGKBXsFXqdXjCq0G8+avhsgw/N1EKw==",
+  "dgSpecHash": "mmzDFpke1xaPSygx3bUvRJtEbRm7FCNYANBdCoEYSlBUqsD8qnwiK+WAyYqkNkDE5v0M1UiKqPb3gMwC0lFieg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asemn\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\asemn\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

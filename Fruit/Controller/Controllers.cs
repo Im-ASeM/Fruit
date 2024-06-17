@@ -17,7 +17,7 @@ public class Controllers:Controller
     }
 
     [HttpPost]
-    public IActionResult Register(IdLessUser user){
+    public IActionResult Register(NewUser user){
         return Ok(lp.Register(user));
     }
     

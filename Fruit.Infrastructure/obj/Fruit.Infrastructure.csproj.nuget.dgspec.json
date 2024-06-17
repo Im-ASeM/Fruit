@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj": {}
+    "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Core\\Fruit.Core.csproj": {
+    "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Core\\Fruit.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Core\\Fruit.Core.csproj",
+        "projectUniqueName": "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Core\\Fruit.Core.csproj",
         "projectName": "Fruit.Core",
-        "projectPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Core\\Fruit.Core.csproj",
+        "projectPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Core\\Fruit.Core.csproj",
         "packagesPath": "C:\\Users\\asemn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Core\\obj\\",
+        "outputPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj": {
+    "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj",
         "projectName": "Fruit.Infrastructure",
-        "projectPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Infrastructure\\Fruit.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\asemn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Core\\Fruit.Core.csproj": {
-                "projectPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\Fruit\\Fruit.Core\\Fruit.Core.csproj"
+              "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Core\\Fruit.Core.csproj": {
+                "projectPath": "C:\\Users\\asemn\\Desktop\\Code\\C#\\S2\\Fruit\\Fruit.Core\\Fruit.Core.csproj"
               }
             }
           }

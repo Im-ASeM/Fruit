@@ -1,6 +1,6 @@
 public interface ILogginProcces
 {
-    public string Register(IdLessUser user);
+    public string Register(NewUser user);
     public string Login(IdLessUser user);
     public string DeleteUser(int UserID);
     public List<SimpleUser> AllUser();
